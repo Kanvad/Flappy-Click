@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LogicManagerScript : MonoBehaviour
 {
     int _playerScore;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
     public GameObject gameOver;
 
     public void AddScore(int scoreToAdd) {
