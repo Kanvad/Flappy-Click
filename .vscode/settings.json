@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Flappy Click.sln"
+    "dotnet.defaultSolution": "Flappy-Click.sln"
 }
