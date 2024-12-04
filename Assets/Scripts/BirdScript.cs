@@ -36,6 +36,11 @@ public class BirdScript : MonoBehaviour
         StopGame();
     }
 
+    public bool BirdIsAlive()
+    {
+        return _birdIsAlive;
+    }
+
     void StopGame() {
         _logic.GameOver();
         _birdIsAlive = false;

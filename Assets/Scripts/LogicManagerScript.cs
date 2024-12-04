@@ -8,6 +8,8 @@ using TMPro;
 public class LogicManagerScript : MonoBehaviour
 {
     int _playerScore;
+    int _level = 3;
+    float _speedLevel = 0;
     public TextMeshProUGUI scoreText;
     public GameObject gameOver;
 
@@ -17,10 +19,23 @@ public class LogicManagerScript : MonoBehaviour
     }
 
     public void RestartGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void GameOver() {
         gameOver.SetActive(true);
+    }
+
+    public float SpeedLevel() {
+        if (_playerScore == _level) {
+            _level += 3;
+            _speedLevel++;
+            return _speedLevel;
+        }
+        return _speedLevel;
+    }
+
+    public int PlayerScore() {
+        return _playerScore;
     }
 }
